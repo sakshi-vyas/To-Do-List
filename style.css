@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.extra{
+    background-image:url("./todo.jpg");
+    height:100%;
+    width:50%;
+    margin: auto;
+  
+   /* box-shadow: 5px 10px #888888;*/
+}
+
+body{
+    
+     color: white;
+    background-image:url("https://images.unsplash.com/photo-1583665069666-36eb45816079?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+     font-family: 'Dancing Script', cursive;
+     min-height:100vh;
+     padding-top:4em;
+     background-size:cover;
+     margin:0 auto;
+    }
+header{
+    font-size:1.5rem;
+    background-image: url("./todo.jpg");
+    color:maroon;
+    height:10%;
+    font-weight:700;
+     }
+header,form{
+    min-height:20vh;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+form{
+    background-image: url("./todo.jpg");
+    height:80%;
+    font-size:0.8em;
+    font-family: 'comic sans';
+}
+form input,form button{
+    padding:0.5rem;
+    font-family: 'comic sans';
+    font-size:1rem;
+    border: none;
+    background: white;
+}
+form button{
+    color:skyblue;
+    background:white;
+    cursor:pointer;
+    transition: all 0.3s ease; 
+}
+form button:hover{
+    background-color:#5582ec;
+    color:white;
+    }
+.todo-container{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    background-image: url("./todo.jpg");
+}
+.todo-list{
+    font-family:'comic sans';
+
+    min-width:30%;
+    list-style:none;
+    font-size:0.8em;
+}
+.todo{
+    margin:0.5rem;
+    background:white;
+    color:black;
+    font-size:0.8rem;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+.todo li{
+    flex:1;
+    }
+.trash-btn, .complete-btn{
+    background:hsl(202, 97%, 65%);
+    color:white;
+    border: none;
+    padding:1rem;
+    cursor:pointer;
+    font-size:1rem;
+}
+.complete-btn{
+    background-color: skyblue;
+}
+.todo-item{
+    padding: 0rem 0.5rem;
+}
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border:none;
+}
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    font-size:1em;
+}
+select{
+    color: darkblue;
+    width:10rem;
+    height:2.5em;
+    cursor:pointer;
+   padding-left:1em;
+    font-size:1em;
+}
+.select::after{
+    content:"\25BC";
+    width:0.5em;
+    background:skyblue;
+    top:0;
+    right:0;
+    padding:1rem;
+    pointer-events: none;
+    transition:all  0.3s ease;
+}
+.select.hover::after{
+    background:white;
+    color: skyblue;
+}
+
+@media only screen and (max-width: 768px) {
+    .extra{
+        background-image:url("./todo.jpg");
+        height:100%;
+        width:70%;
+        margin: auto;
+      
+       /* box-shadow: 5px 10px #888888;*/
+    }
+    
+    header{
+        font-size:1.5rem;
+        background-image: url("./todo.jpg");
+        color:maroon;
+        height:10%;
+        font-weight:700;
+        }
+    header,form{
+        min-height:20vh;
+        display:flex;
+        justify-content:center;
+        align-items: center;
+    }
+    form{
+        background-image: url("./todo.jpg");
+        height:80%;
+        font-size:0.8em;
+          font-family: 'comic sans';
+    }
+    form input,form button{
+        padding:0.5rem;
+        font-family: 'comic sans';
+        font-size:1rem;
+        border: none;
+        background: white;
+    }
+    form button{
+        color:skyblue;
+        background:white;
+        cursor:pointer;
+        transition: all 0.3s ease; 
+    }
+
+}
+
+
+@media only screen and (max-width: 375px){
+
+    .select{
+        margin: 1rem;
+         width:3em;
+        overflow: hidden;
+        font-size:1em;
+    }
+
+    form input,form button{
+        padding:0.5rem;
+        font-family: 'comic sans';
+        font-size:1rem;
+        border: none;
+        background: white;
+    }
+    form input{
+        width:4em;
+    }
+    .extra{
+        background-image:url("./todo.jpg");
+        height:100%;
+        width:100%;
+        margin: auto;
+        border: 2px solid red;  
+       /* box-shadow: 5px 10px #888888;*/
+    }
+    .select::after{
+        content:"\25BC";
+        width:0.5em;
+        background:skyblue;
+        align-items: flex-end;
+        padding:0.2em;
+        pointer-events: none;
+        transition:all  0.3s ease;
+    }
+}
